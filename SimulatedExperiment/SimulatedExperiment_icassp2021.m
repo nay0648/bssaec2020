@@ -2,7 +2,7 @@ clear;
 % data segment length
 seglen=16000*7;
 % echo path and adaptive filter length
-flen=16;
+flen=256;
 % SER (db) in the experiment
 serdb=-20;
 
@@ -33,7 +33,7 @@ audiowrite('aec_input.wav', [mic, ref], fs);
 
 %% algorithm iteration
 % NLMS step size
-mu=0.05;
+mu=0.5;
 % forgetting factor
 alpha=0.9999;
 % ICA nonlinearity parameter
